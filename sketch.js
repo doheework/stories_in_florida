@@ -10,6 +10,9 @@ let sliderR;
 let sliderG;
 let sliderB;
 let x, y;
+let w = -0.3;
+let h = -0.2;
+
 
 let light;
 let street;
@@ -93,19 +96,21 @@ function draw() {
   image(island,-2200,-610,3018.405,1696.799);
   image(panther,-1100, 200, 568, 379);
   
-  x = x - 0.3;
-  if(x<-1100){
-    x = -1050;
-  } 
+  x = x + w
+  if(x<-1060){
+    w = 0.2;
+  } else{if(-1040<x){
+    w = -0.3;
+  }}
+ 
   // 일정 속도로 위를 향해 움직이기
   y = y - 0.1;
   
   // 화면 하단으로 리셋
-  if (y < -550) {
+  if (y < -530) {
     y = -500;
   }
  
-
   translate(0,0,180);
   image(controller, -600,-400,  459,809);
 
