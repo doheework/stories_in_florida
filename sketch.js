@@ -104,10 +104,10 @@ function draw() {
   }}
  
   y = y + h;
-  if (y < -900) {
-    h = 0.2;
-  } else{if(-490 < y){
-    h = -0.3;
+  if (y < -520) {
+    h = 0.3;
+  } else{if(-100 < y){
+    h = -0.2;
   }}
  
   translate(0,0,180);
