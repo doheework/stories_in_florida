@@ -96,7 +96,7 @@ function draw() {
   image(island,-2200,-610,3018.405,1696.799);
   image(panther,-1100, 200, 568, 379);
   
-  x = x + w
+  x = x + w;
   if(x<-1060){
     w = 0.2;
   } else{if(-1040<x){
