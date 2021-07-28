@@ -104,7 +104,7 @@ function draw() {
   }}
  
   y = y + h;
-  if (y < -600) {
+  if (y < -900) {
     h = 0.2;
   } else{if(-490 < y){
     h = -0.3;
