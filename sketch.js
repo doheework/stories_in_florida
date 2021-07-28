@@ -151,7 +151,4 @@ function draw() {
 
   translate(0,0,13.3);
   image(img2,0,0,191.685, 313.365);
-
-
-
 }
