@@ -113,13 +113,13 @@ function draw() {
   fill(colourR,colourG,colourB);
   noStroke();
   push();
-  rotateX(frameCount * 0.13);
-  rotateZ(frameCount * 0.13);
+  rotateX(frameCount * 0.1);
+  rotateZ(frameCount * 0.1);
   box(191.685, 313.365, 13);
   pop();
  
-  rotateX(frameCount * 0.13);
-  rotateZ(frameCount * 0.13);
+  rotateX(frameCount * 0.1);
+  rotateZ(frameCount * 0.1);
   translate(2,0,0);
   fill(230);
   box(191.685, 313.365, 8);
