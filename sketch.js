@@ -11,7 +11,7 @@ let sliderG;
 let sliderB;
 let x, y;
 let w = -0.3;
-let h = -0.15;
+let h = -0.3;
 
 
 let light;
@@ -104,10 +104,10 @@ function draw() {
   }}
  
   y = y + h;
-  if (y < -510) {
-    h = 0.1;
+  if (y < -600) {
+    h = 0.2;
   } else{if(-490 < y){
-    h = -0.15;
+    h = -0.3;
   }}
  
   translate(0,0,180);
