@@ -11,7 +11,7 @@ let sliderG;
 let sliderB;
 let x, y;
 let w = -0.3;
-let h = -0.2;
+let h = -0.3;
 
 
 let light;
@@ -103,13 +103,12 @@ function draw() {
     w = -0.3;
   }}
  
-  // 일정 속도로 위를 향해 움직이기
-  y = y - 0.1;
-  
-  // 화면 하단으로 리셋
-  if (y < -530) {
-    y = -500;
-  }
+  y = y + h;
+  if (y < -510) {
+    h = 0.2;
+  } else{if(-490<x){
+    h = -0.3;
+  }}
  
   translate(0,0,180);
   image(controller, -600,-400,  459,809);
