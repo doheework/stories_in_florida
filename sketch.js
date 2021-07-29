@@ -91,10 +91,10 @@ function draw() {
   
 
   translate(0,0,-180);
-  image(light, -100,-910,2252.844,1467.144);
-  image(wave, x, y,2184,1158.339);
-  image(island,-2200,-610,3018.405,1696.799);
-  image(panther,-1100, 200, 568, 379);
+  image(light, -80,-910,2252.844,1467.144);
+  image(wave, x, y,3000,1300);
+  image(island,-2200,-590,3018.405,1696.799);
+  image(panther,-1100, 240, 500, 329);
   
   x = x + w;
   if(x<-1060){
