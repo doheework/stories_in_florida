@@ -13,13 +13,14 @@ let x, y;
 let w = -0.3;
 let h = -0.3;
 
-
 let light;
 let street;
 let panther;
 let ghost;
 let wave;
 let island;
+
+let img1;
 
 function preload(){
   img = loadImage("3delement.png");
@@ -43,9 +44,9 @@ function setup() {
   sliderR = createSlider(0, 255, 159);
   sliderG = createSlider(0, 255, 55);
   sliderB = createSlider(0, 255, 76);
-  sliderR.position(400 , 210);
-  sliderG.position(400, 260);
-  sliderB.position(400, 310);
+  sliderR.position(400 , 180);
+  sliderG.position(400, 230);
+  sliderB.position(400, 280);
 
   button = createImg('pngegg.png');
   button.position(435, 390);
@@ -53,15 +54,16 @@ function setup() {
   button.mousePressed(randomcolour);
 
   button = createButton('save');
-  button.position(450, 700);
+  button.position(450, 720);
   button.mousePressed(savebook);
 
   saveCanvas =  createGraphics(800, windowHeight);
 
-  x = -1050;
+  x = -1200;
   y = -500;
 
 }
+
 
 function savebook(){
   let c = get(800, 0, 800, windowHeight);
@@ -69,7 +71,6 @@ function savebook(){
   save(saveCanvas, "storiesinflorida.png");
   
 }
-
 
 function randomcolour(){
   var val = random(0,255);
@@ -88,18 +89,16 @@ function draw() {
 
   background(250);
   
-  
-
   translate(0,0,-180);
   image(light, -80,-910,2252.844,1467.144);
-  image(wave, x, y,3000,1300);
-  image(island,-2200,-590,3018.405,1696.799);
-  image(panther,-1100, 240, 500, 329);
+  image(wave, x, y, 3000,1300);
+  image(island,-2200,-570,3018.405,1696.799);
+  image(panther,-1100, 280, 500, 329);
   
   x = x + w;
-  if(x<-1060){
+  if(x<-1210){
     w = 0.2;
-  } else{if(-1040<x){
+  } else{if(-1190<x){
     w = -0.3;
   }}
  
@@ -109,6 +108,7 @@ function draw() {
   } else{if(-100 < y){
     h = -0.2;
   }}
+
  
   translate(0,0,180);
   image(controller, -600,-400,  459,809);
@@ -152,3 +152,5 @@ function draw() {
   translate(0,0,13.3);
   image(img2,0,0,191.685, 313.365);
 }
+
+
