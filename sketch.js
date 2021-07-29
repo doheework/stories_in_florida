@@ -14,13 +14,20 @@ let w = -0.3;
 let h = -0.3;
 
 let light;
+let lightoff;
 let street;
 let panther;
 let ghost;
 let wave;
 let island;
 
-let img1;
+let checkbox1;
+let checkbox2;
+let checkbox3;
+let checkbox4;
+let checkbox5;
+let checkbox6;
+
 
 function preload(){
   img = loadImage("3delement.png");
@@ -36,26 +43,39 @@ function preload(){
   ghost = loadImage("ghost.png");
   wave = loadImage("lowwave.png");
   island = loadImage("island.png");
+  lightoff = loadImage("light_off.png");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-
   sliderR = createSlider(0, 255, 159);
   sliderG = createSlider(0, 255, 55);
   sliderB = createSlider(0, 255, 76);
-  sliderR.position(400 , 180);
-  sliderG.position(400, 230);
-  sliderB.position(400, 280);
+  sliderR.position(400 , 150);
+  sliderG.position(400, 190);
+  sliderB.position(400, 240);
 
-  button = createImg('pngegg.png');
-  button.position(435, 390);
-  button.size(70,70);
-  button.mousePressed(randomcolour);
+ 
 
   button = createButton('save');
-  button.position(450, 720);
+  button.position(450, 730);
   button.mousePressed(savebook);
+
+  checkbox1 = createCheckbox('Under the Wave', false);
+  checkbox2 = createCheckbox('Dogs Go Wolf', false);
+  checkbox3 = createCheckbox('Flower Hunters', false);
+  checkbox4 = createCheckbox('The Midnight Zone', false);
+  checkbox5 = createCheckbox('Ghosts and Empties', false);
+  checkbox6 = createCheckbox('Above And Below', false);
+
+  checkbox1.position(400,290);
+  checkbox2.position(400,320);
+  checkbox3.position(400,350);
+  checkbox4.position(400,380);
+  checkbox5.position(400,410);
+  checkbox6.position(400,440);
+
+
 
   saveCanvas =  createGraphics(800, windowHeight);
 
@@ -63,7 +83,6 @@ function setup() {
   y = -500;
 
 }
-
 
 function savebook(){
   let c = get(800, 0, 800, windowHeight);
@@ -90,11 +109,30 @@ function draw() {
   background(250);
   
   translate(0,0,-180);
-  image(light, -80,-910,2252.844,1467.144);
-  image(wave, x, y, 3000,1300);
-  image(island,-2200,-570,3018.405,1696.799);
-  image(panther,-1100, 280, 500, 329);
   
+  
+  if (checkbox3.checked()) {
+    image(light, -80,-910,2252.844,1467.144);
+  } else{ image(lightoff,-80,-910,2252.844,1467.144);
+  }
+  
+  if (checkbox1.checked()) {
+    image(wave, x, y, 3000,1300);
+  } else {
+  }
+
+  if (checkbox2.checked()){
+    image(island,-1500,-570,3018.405,1696.799);
+  } else {
+  }
+
+  if (checkbox4.checked()) {
+    image(panther,-100, 280, 500, 329);
+  } else {
+  }
+
+ 
+
   x = x + w;
   if(x<-1210){
     w = 0.2;
@@ -111,18 +149,30 @@ function draw() {
 
  
   translate(0,0,180);
-  image(controller, -600,-400,  459,809);
+  image(controller, -600,-420,  459,824);
 
-  tint(colourR, colourG, colourB,200);
-  image(ghost,mouseX-1200, mouseY-900, 607.4,772.65);
+  if (checkbox5.checked()){
+    tint(colourR, colourG, colourB,200);
+    image(ghost,mouseX-1200, mouseY-900, 607.4,772.65);
+  } else{
+  }
+ 
+  if(checkbox6.checked()){
+    button = createImg('pngegg.png');
+    button.position(435, 480);
+    button.size(70,70);
+    button.mousePressed(randomcolour);
+    fill(0);
+  }else{}
 
   fill(colourR,colourG,colourB);
-  rect(-450,70, 161.58, 127.68);
+  rect(-450,120, 161.58, 127.68);
   tint(217,199,182,300);
-  image(stick,-450,70, 161.58, 127.68);
+  image(stick,-450,120, 161.58, 127.68);
   tint(colourR, colourG, colourB,200);
-  image(stickhand, -450,70, 161.58, 127.68);
+  image(stickhand, -450,120, 161.58, 127.68);
 
+  
 
   translate(250,40,200);
   fill(colourR,colourG,colourB);
