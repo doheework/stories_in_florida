@@ -5,4 +5,13 @@ html, body {
   canvas {
     display: block;
   }
-  
+
+  .controler{
+    position: absolute;
+    top : 42px;
+    left: 240px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    
+  }

@@ -51,14 +51,14 @@ function setup() {
   sliderR = createSlider(0, 255, 159);
   sliderG = createSlider(0, 255, 55);
   sliderB = createSlider(0, 255, 76);
-  sliderR.position(400 , 150);
-  sliderG.position(400, 190);
-  sliderB.position(400, 240);
+  sliderR.position(400 , 180);
+  sliderG.position(400, 220);
+  sliderB.position(400, 270);
 
  
 
   button = createButton('save');
-  button.position(450, 730);
+  button.position(450, 700);
   button.mousePressed(savebook);
 
   checkbox1 = createCheckbox('Under the Wave', false);
@@ -68,12 +68,12 @@ function setup() {
   checkbox5 = createCheckbox('Ghosts and Empties', false);
   checkbox6 = createCheckbox('Above And Below', false);
 
-  checkbox1.position(400,290);
-  checkbox2.position(400,320);
-  checkbox3.position(400,350);
-  checkbox4.position(400,380);
-  checkbox5.position(400,410);
-  checkbox6.position(400,440);
+  checkbox1.position(400,350);
+  checkbox2.position(400,380);
+  checkbox3.position(400,410);
+  checkbox4.position(400,440);
+  checkbox5.position(400,470);
+  checkbox6.position(400,500);
 
 
 
@@ -149,7 +149,7 @@ function draw() {
 
  
   translate(0,0,180);
-  image(controller, -600,-420,  459,824);
+  
 
   if (checkbox5.checked()){
     tint(colourR, colourG, colourB,200);
@@ -159,18 +159,13 @@ function draw() {
  
   if(checkbox6.checked()){
     button = createImg('pngegg.png');
-    button.position(435, 480);
+    button.position(435, 560);
     button.size(70,70);
     button.mousePressed(randomcolour);
     fill(0);
   }else{}
 
-  fill(colourR,colourG,colourB);
-  rect(-450,120, 161.58, 127.68);
-  tint(217,199,182,300);
-  image(stick,-450,120, 161.58, 127.68);
-  tint(colourR, colourG, colourB,200);
-  image(stickhand, -450,120, 161.58, 127.68);
+ 
 
   
 
@@ -187,7 +182,7 @@ function draw() {
   rotateZ(frameCount * 0.01);
   translate(2,0,0);
   fill(230);
-  box(191.685, 313.365, 8);
+  box(191, 314, 8);
   
   translate(-99.8, -155, 6.6);
   tint(217,199,182,300);
@@ -197,10 +192,10 @@ function draw() {
   image(back,0,0,191.685, 313.365);
 
   tint(colourR, colourG, colourB, 210);
-  image(backhand,0,0,191.685, 313.365);
+  image(backhand,0,-2,191.685, 313.365);
 
   translate(0,0,13.3);
-  image(img2,0,0,191.685, 313.365);
+  image(img2,0,-2,191.685, 313.365);
 }
 
 
