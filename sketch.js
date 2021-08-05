@@ -165,9 +165,6 @@ function draw() {
     fill(0);
   }else{}
 
- 
-
-  
 
   translate(250,40,200);
   fill(colourR,colourG,colourB);
@@ -191,10 +188,11 @@ function draw() {
   translate(2,0,-13.2);
   image(back,0,0,191.685, 313.365);
 
+  translate(0,0,-0.1);
   tint(colourR, colourG, colourB, 210);
   image(backhand,0,-2,191.685, 313.365);
 
-  translate(0,0,13.3);
+  translate(0,0,13.4);
   image(img2,0,-2,191.685, 313.365);
 }
 
